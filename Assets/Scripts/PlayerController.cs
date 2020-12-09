@@ -37,9 +37,17 @@ public class PlayerController : MonoBehaviour
         {
             cam.transform.position = new Vector3(18f, 0f, -10f);
         }
-        else if (transform.position.x >= 27f)
+        else if (transform.position.x >= 27f && transform.position.x < 45f)
         {
             cam.transform.position = new Vector3(36f, 0f, -10f);
+        }
+        else if (transform.position.x >= 45f && transform.position.x < 65f)
+        {
+            cam.transform.position = new Vector3(54f, 0f, -10f);
+        }
+        else if (transform.position.x >= 65f)
+        {
+            cam.transform.position = new Vector3(72f, 0f, -10f);
         }
 
         // Interact
