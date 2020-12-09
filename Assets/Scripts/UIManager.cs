@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-     public GameObject dog, cat, titleScreen, chooseScreen;
+     public GameObject dog, cat, bunny, titleScreen, chooseScreen;
 
     void Start()
     {
@@ -50,6 +50,7 @@ public class UIManager : MonoBehaviour
     {
         dog.SetActive(true);
         cat.SetActive(false);
+        bunny.SetActive(false);
         chooseScreen.SetActive(false);
         Time.timeScale = 1f;
         Cursor.visible = false;
@@ -60,9 +61,23 @@ public class UIManager : MonoBehaviour
     {
         cat.SetActive(true);
         dog.SetActive(false);
+        bunny.SetActive(false);
         chooseScreen.SetActive(false);
         Time.timeScale = 1f;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+    public void ChooseBunny()
+    {
+        cat.SetActive(false);
+        dog.SetActive(false);
+        bunny.SetActive(true);
+        chooseScreen.SetActive(false);
+        Time.timeScale = 1f;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        
+    }
+
 }
